@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 15px 30px;
+  font-family: sans-serif;
+}
+
+/* Logo styling */
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Turn list items horizontal */
+.nav-links {
+  display: flex;
+  list-style: none; /* Removes bullet points */
+}
+
+/* Spacing between links */
+.nav-links li {
+  padding: 0 15px;
+}
+
+/* Link aesthetics */
+.nav-links a {
+  color: white;
+  text-decoration: none; /* Removes underline */
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+/* Subtle color change when hovering */
+.nav-links a:hover {
+  color: #04AA6D; 
+}
+
+
+.search-bar{
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;   
+  gap: 12px;     
+}
+
+#cook_button{
+    margin: 10px 30px;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 10vh;
+    background-color: orange
+}
+
+.recipe-search{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  
+    gap: 12px;
+    max-width: 400px;      
+    padding: 20px;  
+}
+.recipe_button{
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: orange
+}
