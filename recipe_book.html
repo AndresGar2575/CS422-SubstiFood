@@ -10,18 +10,27 @@
 
   <body>
     <nav class="navbar">
-        <div class="logo">MyWebsite</div>
+        <div class="logo"><img src="images/sf-logo.png"></div>
         <ul class="nav-links">
             <li><a href="main.html">Home</a></li>
             <li><a href="recipe_book.html">Recipe Book</a></li>
             <li><a href="ingredient_book.html">Ingredient Book</a></li>
         </ul>
     </nav>
-
+    <main class="recipe-page">
     <div class="recipe-search"> 
         <h1>Recipe Book</h1>
-        <input type="text" id="recipe" name="username">
-        <button class="recipe_button">Order By</button>
-        <button class="recipe_button">Sort By</button>
+        <form class="ingredient-search" role="search" onsubmit="return false">
+            <input id="ingredient-search" type="search" placeholder="search" aria-label="Search ingredients" />
+            <button type="submit" aria-label="Search">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"><path d="M2 1.5v9l8-4.5z"/></svg>
+            </button>
+        </form>       
+        <div class="filters">
+            <button class="filter-btn" type="button">Order By</button>
+            <button class="filter-btn" type="button">Sort By</button>
+        </div>
+
     </div>
+    </main>
   </body>

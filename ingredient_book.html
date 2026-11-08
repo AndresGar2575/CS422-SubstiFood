@@ -10,7 +10,7 @@
 
 <body>
     <nav class="navbar">
-        <div class="logo">MyWebsite</div>
+        <div class="logo"><img src="images/sf-logo.png"></div>
         <ul class="nav-links">
             <li><a href="main.html">Home</a></li>
             <li><a href="recipe_book.html">Recipe Book</a></li>
@@ -18,4 +18,57 @@
         </ul>
     </nav>
 
-</body>
+    <main class="ingredient-page">
+      <h1>Ingredient Book</h1>
+      <p class="intro">
+        Search here for substitutions directly! Looking for a recipe instead?
+        Check out <a href="recipe_book.html">the recipe book</a>.
+      </p>
+ 
+      <form class="ingredient-search" role="search" onsubmit="return false">
+        <input id="ingredient-search" type="search" placeholder="search" aria-label="Search ingredients" />
+        <button type="submit" aria-label="Search">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"><path d="M2 1.5v9l8-4.5z"/></svg>
+        </button>
+      </form>
+ 
+      <section class="ingredient-grid" id="ingredient-grid">
+        <a class="ingredient-card" href="#">
+          <h2>Evaporated Milk</h2>
+          <p>Evaporated milk is a fatty, shelf stable milk that has had 60% of the water removed from it</p>
+          <svg width="16" height="16" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1" stroke-linejoin="round"><path d="M2 1.5v9l8-4.5z"/></svg>
+        </a>
+ 
+        <a class="ingredient-card" href="#">
+          <h2>Butter</h2>
+          <p>Butter is a made of the fat and protein of churned cream</p>
+          <svg width="16" height="16" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1" stroke-linejoin="round"><path d="M2 1.5v9l8-4.5z"/></svg>
+        </a>
+ 
+        <a class="ingredient-card" href="#">
+          <h2>Milk</h2>
+          <p>Milk is a nutritious food product from mammals</p>
+          <svg width="16" height="16" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1" stroke-linejoin="round"><path d="M2 1.5v9l8-4.5z"/></svg>
+        </a>
+ 
+        <a class="ingredient-card" href="#">
+          <h2>Coconut Cream</h2>
+          <p>Coconut cream is a thick and creamy unsweetened ingredient. The sweetened version is called cream of coconut.</p>
+          <svg width="16" height="16" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1" stroke-linejoin="round"><path d="M2 1.5v9l8-4.5z"/></svg>
+        </a>
+ 
+        <a class="ingredient-card" href="#">
+          <h2>Cornstarch</h2>
+          <p>Cornstarch is the starch powder from the corn grain, used to thicken dishes and make syrups</p>
+          <svg width="16" height="16" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1" stroke-linejoin="round"><path d="M2 1.5v9l8-4.5z"/></svg>
+        </a>
+ 
+        <a class="ingredient-card" href="#">
+          <h2>Greek Yogurt</h2>
+          <p>Greek yogurt is a thick, protein-rich nutritious yogurt with various kinds to choose from</p>
+          <svg width="16" height="16" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1" stroke-linejoin="round"><path d="M2 1.5v9l8-4.5z"/></svg>
+        </a>
+      </section>
+    </main>
+ 
+  </body>

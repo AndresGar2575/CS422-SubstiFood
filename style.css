@@ -4,6 +4,23 @@
   box-sizing: border-box;
 }
 
+.home-page {
+  --bg: #fcf3ef;
+  --field: #faebe4;
+  --border: #e2b9a3;
+  --text: #3a2a24;
+  --accent: #b8643a;
+
+  color: var(--text);
+  font-family: var(--font);
+}
+
+body:has(.home-page),
+.home-body {
+  background: #fcf3ef;
+  min-height: 100vh;
+}
+
 /* Navbar container */
 .navbar {
   display: flex;
@@ -15,11 +32,12 @@
 }
 
 /* Logo styling */
-.logo {
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
+.logo img {
+  height: 70px;
+  width: auto;
+  display: block;
 }
+
 
 /* Turn list items horizontal */
 .nav-links {
@@ -42,38 +60,268 @@
 
 /* Subtle color change when hovering */
 .nav-links a:hover {
-  color: #04AA6D; 
+  color: #04AA6D;
 }
 
-
-.search-bar{
+.search-bar {
   min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;   
-  gap: 12px;     
+  align-items: center;
+  gap: 12px;
 }
 
-#cook_button{
-    margin: 10px 30px;
-    padding: 10px 20px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    border-radius: 10vh;
-    background-color: orange
+.cook-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 2px;
+  background: var(--accent);
+  color: var(--bg);
+  font: 1.15rem var(--font);
+  letter-spacing: -0.02em;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.cook-btn:hover {
+  background: #a2562f;
 }
 
-.recipe-search{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;  
-    gap: 12px;
-    max-width: 400px;      
-    padding: 20px;  
+.cook-btn:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
 }
-.recipe_button{
-    font-size: 1.5rem;
-    cursor: pointer;
-    background-color: orange
+
+.recipe-search {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.recipe_button {
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: orange;
+}
+/* ===================== Recipe Book ===================== */
+.recipe-page{
+    --bg: #fcf3ef;
+    --field: #faebe4;
+    --border: #e2b9a3;
+    --text: #3a2a24;
+    --accent: #b8643a;
+
+    color: var(--text);
+    font-family: var(--font);
+}
+body:has(.recipe-page),
+    .ingredient-body {
+    background: #fcf3ef;
+    min-height: 100vh;
+}
+/* Stack the buttons vertically on the left */
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+/* Solid button with label left, triangle right */
+.filter-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 240px;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 2px;
+  background: var(--accent);
+  color: var(--bg);
+  font: 1.15rem var(--font);
+  letter-spacing: -0.02em;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+/* Outlined triangle in cream */
+.filter-btn::after {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' fill='none' stroke='%23fcf3ef' stroke-width='1' stroke-linejoin='round'%3E%3Cpath d='M2 1.5v9l8-4.5z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+.filter-btn:hover {
+  background: #a2562f;
+}
+
+.filter-btn:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
+
+/* ===================== Ingredient Book ===================== */
+
+.ingredient-page {
+  --bg: #fcf3ef;
+  --field: #faebe4;
+  --border: #e2b9a3;
+  --text: #3a2a24;
+  --accent: #b8643a;
+
+  color: var(--text);
+  font-family: var(--font);
+}
+
+body:has(.ingredient-page),
+.ingredient-body {
+  background: #fcf3ef;
+  min-height: 100vh;
+}
+
+.ingredient-page {
+  max-width: 1000px;
+  margin: 0;              
+  padding: 48px 32px 80px;
+}
+
+.ingredient-page h1 {
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.ingredient-page .intro {
+  margin: 10px 0 28px;
+  font-size: 1.05rem;
+  font-style: italic;
+  letter-spacing: -0.02em;
+}
+
+.ingredient-page .intro a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.ingredient-page .intro a:hover {
+  text-decoration: underline;
+}
+
+.ingredient-search {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 450px;
+  margin-bottom: 48px;
+  background: var(--field);
+  border-radius: 4px;
+}
+
+.ingredient-search input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 14px;
+  border: 0;
+  background: transparent;
+  font: italic 1rem var(--font);
+  color: var(--text);
+}
+
+.ingredient-search input::placeholder {
+  color: var(--accent);
+}
+
+.ingredient-search input:focus {
+  outline: none;
+}
+
+.ingredient-search:focus-within {
+  outline: 2px solid var(--accent);
+}
+
+.ingredient-search button {
+  display: flex;
+  padding: 8px 12px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  color: var(--accent);
+}
+
+.ingredient-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 420px));
+  gap: 48px 60px;
+}
+
+.ingredient-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 240px;
+  padding: 24px 24px 56px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.ingredient-card:hover {
+  background: var(--field);
+}
+
+.ingredient-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.ingredient-card h2 {
+  margin-bottom: 14px;
+  font-size: 1.75rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.ingredient-card p {
+  font-size: 1.05rem;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.ingredient-card svg {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  color: var(--border);
+}
+
+.ingredient-card:hover svg {
+  color: var(--accent);
+}
+
+@media (max-width: 1000px) {
+  .ingredient-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .ingredient-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ingredient-page h1 {
+    font-size: 2.6rem;
+  }
 }

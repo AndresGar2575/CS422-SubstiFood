@@ -10,18 +10,24 @@
 
   <body>
     <nav class="navbar">
-        <div class="logo">MyWebsite</div>
+        <div class="logo"><img src="images/sf-logo.png"></div>
         <ul class="nav-links">
             <li><a href="main.html">Home</a></li>
             <li><a href="recipe_book.html">Recipe Book</a></li>
             <li><a href="ingredient_book.html">Ingredient Book</a></li>
         </ul>
     </nav>
-
-    <div class="search-bar"> 
-        <h1>What Are you cooking today?</h1>
-        <input type="text" id="username" name="username">
-        <button id="cook_button" >Let's Cook</button>
-    </div>
+    <main class="home-page">
+      <div class="search-bar"> 
+          <h1>What Are you cooking today?</h1>
+          <form class="ingredient-search" role="search" onsubmit="return false">
+              <input id="ingredient-search" type="search" placeholder="search" aria-label="Search ingredients" />
+              <button type="submit" aria-label="Search">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"><path d="M2 1.5v9l8-4.5z"/></svg>
+              </button>
+          </form> 
+          <button class="cook-btn">Let's Cook</button>
+      </div>
+    </main>
     
   </body>
