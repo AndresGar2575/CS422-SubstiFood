@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body>
+  <body data-page="book">
     <nav class="navbar">
         <div class="logo"><img src="images/sf-logo.png"></div>
         <ul class="nav-links">
@@ -18,19 +18,36 @@
         </ul>
     </nav>
     <main class="recipe-page">
-    <div class="recipe-search"> 
+    <div class="book-layout">
+    <div class="recipe-search">
         <h1>Recipe Book</h1>
         <form class="ingredient-search" role="search" onsubmit="return false">
-            <input id="ingredient-search" type="search" placeholder="search" aria-label="Search ingredients" />
+            <input id="recipe-filter" type="search" placeholder="search" aria-label="Search recipes" autocomplete="off" />
             <button type="submit" aria-label="Search">
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"><path d="M2 1.5v9l8-4.5z"/></svg>
             </button>
-        </form>       
+        </form>
         <div class="filters">
-            <button class="filter-btn" type="button">Order By</button>
-            <button class="filter-btn" type="button">Sort By</button>
+            <label class="filter-label">Order by
+              <select class="filter-select" id="sort">
+                <option value="az">Alphabetical A to Z</option>
+                <option value="za">Alphabetical Z to A</option>
+                <option value="cnt">Ingredient count, low to high</option>
+                <option value="min">Time, shortest first</option>
+              </select>
+            </label>
+            <label class="filter-label">Sort by
+              <select class="filter-select" id="grp">
+                <option value="all">All recipes</option>
+                <option value="cuisine">Cuisine</option>
+                <option value="meal">Meal type</option>
+              </select>
+            </label>
         </div>
-
+    </div>
+    <div class="rb" id="recipe-list"><p class="mu">Loading recipes…</p></div>
     </div>
     </main>
+    <script src="app.js"></script>
   </body>
+</html>

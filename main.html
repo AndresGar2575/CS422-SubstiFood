@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body>
+  <body data-page="home">
     <nav class="navbar">
         <div class="logo"><img src="images/sf-logo.png"></div>
         <ul class="nav-links">
@@ -18,16 +18,20 @@
         </ul>
     </nav>
     <main class="home-page">
-      <div class="search-bar"> 
-          <h1>What Are you cooking today?</h1>
-          <form class="ingredient-search" role="search" onsubmit="return false">
-              <input id="ingredient-search" type="search" placeholder="search" aria-label="Search ingredients" />
-              <button type="submit" aria-label="Search">
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"><path d="M2 1.5v9l8-4.5z"/></svg>
-              </button>
-          </form> 
-          <button class="cook-btn">Let's Cook</button>
+      <div class="search-bar">
+          <h1>What are you cooking today?</h1>
+          <div class="sb">
+            <form class="ingredient-search" role="search" onsubmit="return false">
+                <input id="recipe-search" type="search" placeholder="search for a recipe" aria-label="Search recipes" autocomplete="off" />
+                <button type="submit" aria-label="Search">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"><path d="M2 1.5v9l8-4.5z"/></svg>
+                </button>
+            </form>
+            <div id="matches"></div>
+          </div>
+          <button class="cook-btn" id="cook-btn" type="button" hidden>Let's Cook</button>
       </div>
     </main>
-    
+    <script src="app.js"></script>
   </body>
+</html>
