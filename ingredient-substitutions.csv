@@ -1,0 +1,64 @@
+Ingredients,Substitutions
+buttermilk,"['milk with lemon juice', 'milk with vinegar', 'plain yogurt with milk', 'sour cream and milk', 'plant based milk and lemon juice']"
+sour cream,"['greek yogurt', 'plain yogurt', 'cottage cheese and lemon juice', 'cashew cream']"
+heavy cream,"['milk and melted butter', 'half and half', 'coconut cream', 'evaporated milk']"
+half and half,"['milk and heavy cream', 'milk and melted butter', 'evaporated milk']"
+milk,"['evaporated milk and water', plant based milk', 'water and butter']"
+butter,"['vegan butter sticks', 'coconut oil', 'shortening', 'ghee', 'vegetable oil']"
+cream cheese,"['mascapone', 'neufchatel', 'ricotta cheese and greek yogurt', 'vegan cream cheese']"
+ricotta,"['cottage cheese', 'firm tofu and lemon', 'marscapone and milk']"
+mascarpone,"['cream cheese and heavy cream', 'ricotta and heavy cream']"
+evaporated milk,"['milk', 'half and half', 'coconut milk']"
+sweetened condensed milk,"['milk and sugar', 'evaporated milk and sugar', 'sweetened condensed coconut milk']"
+plain yogurt,"['sour cream', 'greek yogurt and milk', 'buttermilk', 'plant based yogurt']"
+greek yogurt,"['plain yogurt', 'sour cream']"
+egg,"['flax egg', 'chia egg', 'unsweetened applesauce', 'mashed ripe banana', 'aquafaba', 'plain yogurt', 'silken tofu']"
+egg white,['aquafaba']
+brown sugar,"['white sugar and molasses', 'coconut sugar']"
+dark brown sugar,"['white sugar and molasses', 'light brown sugar and molasses']"
+sugar,"['coconut sugar', 'brown sugar']"
+powdered sugar,['sugar']
+honey,"['maple syrup', 'agave syrup']"
+maple syrup,"['honey', 'agave syrup', 'brown sugar syrup']"
+cake flour,['all purpose flour and cornstarch']
+self-rising flour,['all purpose flour and baking soda and salt']
+bread flour,"['all purpose flour', 'all purpose flour and vital wheat gluten']"
+all purpose flour,"['bread flour', 'cake flour', 'gluten free baking flour']"
+cornstarch,"['all purpose flour', 'potato starch']"
+baking powder,"['baking soda and cream of tartar', 'baking soda and buttermilk', 'baking soda and vinegar']"
+baking soda,['baking powder']
+cream of tartar,"['lemon juice', 'white vinegar']"
+active dry yeast,['instant yeast']
+instant yeast,['active dry yeast']
+unsweetened chocolate,['cocoa powder and butter']
+semisweet chocolate,"['chocolate chips', 'unsweetened chocolate and sugar']"
+graham cracker crumbs,"['digestive biscuits', 'vanilla wafers', 'animal crackers', 'gluten-free cookies']"
+breadcrumbs,"['panko', 'crushed crakers', 'crushed cornflakes']"
+vegetable oil,"['melted butter', 'melted coconut oil', 'light olive oil', 'neutral oil']"
+vegetable shortening,"['butter', 'coconut oil', 'lard']"
+ghee,"['clarified butter', 'butter', 'neutral oil']"
+mayonnaise,"['greek yogurt', 'sour cream', 'mashed avocado', 'vegan mayo']"
+lemon juice,"['lime juice', 'white wine vinegar']"
+lemon zest,"['lime zest', 'orange zest', 'lemon extract']"
+white wine,"['broth and vinegar', 'white grape juice and vinegar']"
+red wine,"['beef broth and vinegar', 'grape juice and vinegar', 'pomegranate juice and vinegar']"
+rice vinegar,"['apple cider vinegar and sugar', 'white wine vinegar']"
+worcestershire sauce,"['soy sauce and vinegar and sugar', 'soy sauce and tamarind']"
+fish sauce,"['soy sauce and lime juice', 'coconut aminos and salt']"
+tomato paste,['tomato sauce']
+tomato sauce,"['tomato paste and water', 'crushed tomatoes']"
+ketchup,['tomato sauce and sugar and vinegar']
+chicken broth,"['bouillon and water', 'vegetable broth']"
+coconut milk,"['heavy cream', 'cashew cream']"
+dijon mustard,"['stone ground mustard', 'spicy brown mustard', 'yellow mustard']"
+tamarind paste,"['lime juice and brown sugar', 'lime juice and worcestershire']"
+fresh garlic,"['jarred minced garlic', 'garlic powder', 'dried minced garlic']"
+fresh ginger,"['ginger paste', 'ground ginger']"
+onion,"['onion powder', 'dried minced onion', 'shallots', 'frozen chopped onion']"
+shallot,['onion and garlic']
+garam masala,['cumin and coriander and cinnamon and cloves or cardamom']
+allspice,['cinnamon and nutmeg and cloves']
+pumpkin pie spice,['cinnamon and ginger and nutmeg and cloves']
+italian seasoning,['basil and oregano and thyme and rosemary']
+kosher salt,"['table salt', 'fine sea salt']"
+table salt,"['kosher salt', 'fine sea salt']"
