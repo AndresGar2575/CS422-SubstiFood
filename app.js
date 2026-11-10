@@ -1,5 +1,5 @@
 "use strict";
-
+/*  Shared data & helpers l */
 let RECS = [], NAMES = [], S = {};
 const NAME = { "heavy cream": "Heavy Whipping Cream" };
 const BOOK = [
@@ -32,7 +32,9 @@ function f(n) {
 }
 const fq = (q, u) => f(q) + (u ? " " + (u === "cup" && q > 1 ? "cups" : u) : "");
 
-let applied = ld("sf.applied", {}), checked = ld("sf.checked", {});
+// Substitutions live only in memory, so leaving (or reloading) a recipe discards them.
+let applied = {}, checked = ld("sf.checked", {});
+try { localStorage.removeItem("sf.applied"); } catch (e) {}  // clear any older saved substitutions
 
 const lt = i => (i.q == null ? (i.raw ? i.raw + " " : "") : fq(i.q, i.u) + " ") + i.t;
 const can = i => !!S[i.k] && i.q != null && (!S[i.k].u || S[i.k].u === i.u);
@@ -59,7 +61,7 @@ function highlightNav() {
   });
 }
 
-/*  Home  */
+/* Home */
 function initHome() {
   const st = { q: "", chosen: null, rid: null };
   const input = $("recipe-search"), list = $("matches"), cook = $("cook-btn");
@@ -138,7 +140,11 @@ function initRecipe() {
   function render() {
     const r = R();
     document.title = r.name + " | SubstiFood";
-    app.innerHTML = `<div class="recipe-layout"><section><h1>${r.name}</h1><p class="mu">${[r.servings ? "Makes " + r.servings + " Servings" : "", r.minutes ? r.minutes + " Minutes" : "", r.cuisine, r.meal].filter(Boolean).join(" | ")}</p>${banner()}<h2>Ingredients</h2><ul class="ing">${lines()}</ul><h2>Steps</h2><ol>${steps()}</ol></section><aside class="side-panel" aria-live="polite">${panel()}</aside></div>`;
+    app.innerHTML = `<div class="recipe-layout">
+      <header class="recipe-head"><h1>${r.name}</h1><p class="mu">${[r.servings ? "Makes " + r.servings + " Servings" : "", r.minutes ? r.minutes + " Minutes" : "", r.cuisine, r.meal].filter(Boolean).join(" | ")}</p>${banner()}</header>
+      <section class="recipe-left">${r.thumb ? `<img class="recipe-img" src="${esc(r.thumb)}" alt="${esc(r.name)}" onerror="this.remove()">` : ""}<h2>Ingredients</h2><ul class="ing">${lines()}</ul></section>
+      <section class="recipe-steps"><h2>Steps</h2><ol>${steps()}</ol></section>
+      <aside class="side-panel" aria-live="polite">${panel()}</aside></div>`;
   }
 
   app.addEventListener("click", e => {
@@ -146,11 +152,13 @@ function initRecipe() {
     const d = t.dataset, a = d.a;
     if (a === "line") st.pick = d.k;
     else if (a === "lac") st.lac = !st.lac;
-    else if (a === "use") { applied[d.k] = d.n; sv("sf.applied", applied); st.pick = null; }
-    else if (a === "undo") { delete applied[d.k]; sv("sf.applied", applied); }
+    else if (a === "use") { applied[d.k] = d.n; st.pick = null; }
+    else if (a === "undo") { delete applied[d.k]; }
     else return;
     render();
   });
+  // Back/forward can restore this page from the browser's cache with its old state; start fresh instead.
+  window.addEventListener("pageshow", e => { if (e.persisted) location.reload(); });
   loadData().then(render).catch(() => { app.innerHTML = DATA_ERR; });
 }
 
@@ -237,5 +245,6 @@ function initIngredients() {
     .catch(() => { grid.innerHTML = DATA_ERR; });
 }
 
+/*  Boot  */
 highlightNav();
 ({ home: initHome, recipe: initRecipe, book: initBook, ingredients: initIngredients }[document.body.dataset.page] || (() => {}))();
