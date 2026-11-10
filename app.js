@@ -142,7 +142,7 @@ function loadData() {
 }
 
 function highlightNav() {
-  const here = document.body.dataset.nav || location.pathname.split("/").pop() || "main.html";
+  const here = document.body.dataset.nav || location.pathname.split("/").pop() || "index.html";
   document.querySelectorAll(".nav-links a").forEach(a => {
     if (a.getAttribute("href") === here) a.setAttribute("aria-current", "page");
   });
