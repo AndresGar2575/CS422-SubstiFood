@@ -1,1 +1,359 @@
-{"heavy cream":{"u":"cup","o":[{"n":"Whole Milk & Butter","r":"3:1","lac":1,"c":"Butter is mostly fat, so mixed with whole milk it stands in for heavy cream at 3 parts milk to 1 part butter. Closest in richness.","p":[["whole milk",0.75,"cup"],["butter, melted",0.25,"cup"]],"st":"Melt the extra butter, whisk in the milk, then simmer gently until it thickens slightly."},{"n":"Evaporated Milk","r":"1:1","lac":1,"c":"Evaporated milk contains a lot of fat, which makes it a good substitute, though it adds a slight caramelized flavor.","p":[["evaporated milk",1,"cup"]],"st":"Pour in the evaporated milk and simmer gently until it thickens slightly."},{"n":"Soy Milk & Oil","r":"2:1","lac":0,"vg":1,"c":"Oil is all fat, so mixed with soy milk it stands in for heavy cream at 2 parts milk to 1 part oil. Lactose free and vegan.","p":[["soy milk",0.6666667,"cup"],["neutral oil",0.3333333,"cup"]],"st":"Whisk the oil into the soy milk, pour it in, and simmer gently without boiling hard."}]},"evaporated milk":{"u":"cup","o":[{"n":"Half-and-Half","r":"1:1","lac":1,"c":"Half-and-half has a similar texture and fat content. It is slightly richer, and is likely the best evaporated milk substitute.","p":[["half-and-half",1,"cup"]]},{"n":"Whole Milk, simmered down","r":"2.5:1","lac":1,"c":"Simmer the milk on the stove for about 30 minutes, until it has reduced by about 60%.","p":[["whole milk",2.5,"cup"]]}]},"self-rising flour":{"u":"cup","o":[{"n":"All-Purpose Flour, Baking Powder & Salt","r":"1 cup : 1 1/2 tsp : 1/4 tsp","lac":0,"c":"Rises and bakes like self-rising flour as long as the baking powder is whisked in evenly. Skip any extra baking powder or salt in your recipe.","p":[["all-purpose flour",1,"cup"],["baking powder",1.5,"tsp"],["salt",0.25,"tsp"]]}]},"cornstarch":{"u":"Tbsp","o":[{"n":"All-Purpose Flour","r":"2:1","lac":0,"c":"Flour thickens like cornstarch with slightly different properties. Whisk it into cold water first. It takes about 2 minutes longer to thicken.","p":[["all-purpose flour",2,"Tbsp"]]}]}}
+{
+  "heavy cream": {"u": "cup", "o": [
+    {"n": "Whole Milk & Butter", "r": "3:1", "lac": 1, "c": "Butter is mostly fat, so mixed with whole milk it stands in for heavy cream at 3 parts milk to 1 part butter. Closest in richness.", "p": [["whole milk", 0.75, "cup"], ["butter, melted", 0.25, "cup"]], "st": "Melt the extra butter, whisk in the milk, then simmer gently until it thickens slightly."},
+    {"n": "Evaporated Milk", "r": "1:1", "lac": 1, "c": "Evaporated milk contains a lot of fat, which makes it a good substitute, though it adds a slight caramelized flavor.", "p": [["evaporated milk", 1, "cup"]], "st": "Pour in the evaporated milk and simmer gently until it thickens slightly."},
+    {"n": "Soy Milk & Oil", "r": "2:1", "lac": 0, "vg": 1, "c": "Oil is all fat, so mixed with soy milk it stands in for heavy cream at 2 parts milk to 1 part oil. Lactose free and vegan.", "p": [["soy milk", 0.6666667, "cup"], ["neutral oil", 0.3333333, "cup"]], "st": "Whisk the oil into the soy milk, pour it in, and simmer gently without boiling hard."},
+    {"n": "Full-Fat Coconut Cream", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Thick, unsweetened coconut cream swaps 1:1 in sauces, soups and desserts with a mild coconut flavor. Chill a can overnight and scoop off the solids if you need to whip it.", "p": [["full-fat coconut cream", 1, "cup"]]}
+  ]},
+  "evaporated milk": {"u": "cup", "o": [
+    {"n": "Half-and-Half", "r": "1:1", "lac": 1, "c": "Half-and-half has a similar texture and fat content. It is slightly richer, and is likely the best evaporated milk substitute.", "p": [["half-and-half", 1, "cup"]]},
+    {"n": "Whole Milk, simmered down", "r": "2.5:1", "lac": 1, "c": "Simmer the milk on the stove for about 30 minutes, until it has reduced by about 60%.", "p": [["whole milk", 2.5, "cup"]]}
+  ]},
+  "self-rising flour": {"u": "cup", "o": [
+    {"n": "All-Purpose Flour, Baking Powder & Salt", "r": "1 cup : 1 1/2 tsp : 1/4 tsp", "lac": 0, "c": "Rises and bakes like self-rising flour as long as the baking powder is whisked in evenly. Skip any extra baking powder or salt in your recipe.", "p": [["all-purpose flour", 1, "cup"], ["baking powder", 1.5, "tsp"], ["salt", 0.25, "tsp"]]}
+  ]},
+  "cornstarch": {"u": "Tbsp", "o": [
+    {"n": "All-Purpose Flour", "r": "2:1", "lac": 0, "c": "Flour thickens like cornstarch with slightly different properties. Whisk it into cold water first. It takes about 2 minutes longer to thicken.", "p": [["all-purpose flour", 2, "Tbsp"]]},
+    {"n": "Arrowroot", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Swap 1:1. Thickens at a lower temperature and stays glossy, but turns slimy with dairy and doesn't reheat well.", "p": [["arrowroot powder", 1, "Tbsp"]]},
+    {"n": "Potato Starch", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Swap 1:1. Stir it in at the end and don't boil it, or it breaks down.", "p": [["potato starch", 1, "Tbsp"]]},
+    {"n": "Tapioca Starch", "r": "2 : 1", "lac": 0, "vg": 1, "c": "Tapioca is a weaker thickener, so use twice as much. Gives a glossy finish that holds up to freezing.", "p": [["tapioca starch", 2, "Tbsp"]]}
+  ]},
+  "sugar": {"u": ["cup", "Tbsp", "tsp"], "o": [
+    {"n": "Honey", "r": "3/4 : 1", "lac": 0, "c": "Honey is sweeter than sugar, so use about three-quarters as much. Cut other liquid in the recipe by roughly 1/4 cup per cup of honey and lower the oven by 25°F, since honey browns faster.", "p": [["honey", 0.75, "="]]},
+    {"n": "Brown Sugar", "r": "1 : 1", "lac": 0, "c": "Swap 1:1, packed. Adds a light molasses flavor and a slightly moister, chewier result.", "p": [["packed brown sugar", 1, "="]]},
+    {"n": "Maple Syrup", "r": "3/4 : 1", "lac": 0, "vg": 1, "c": "Use three-quarters as much and cut other liquid by about 3 tablespoons per cup of syrup. Adds a mild maple flavor.", "p": [["maple syrup", 0.75, "="]]},
+    {"n": "Agave Nectar", "r": "2/3 : 1", "lac": 0, "vg": 1, "c": "Agave is sweeter than sugar, so use about two-thirds as much. Cut other liquid by about 1/4 cup per cup of sugar replaced and lower the oven by 25°F.", "p": [["agave nectar", 0.6666667, "="]]},
+    {"n": "Coconut Sugar", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Swap 1:1. Slightly less sweet, with a caramel flavor and a darker color.", "p": [["coconut sugar", 1, "="]]}
+  ]},
+  "brown sugar": {"u": "cup", "o": [
+    {"n": "White Sugar & Molasses", "r": "1 cup : 1 Tbsp", "lac": 0, "c": "Rub 1 tablespoon of molasses into each cup of white sugar for light brown sugar. Use 2 tablespoons for dark brown sugar.", "p": [["white sugar", 1, "cup"], ["molasses", 1, "Tbsp"]]},
+    {"n": "Coconut Sugar", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Swap 1:1. Slightly drier than brown sugar, with a caramel flavor.", "p": [["coconut sugar", 1, "cup"]]}
+  ]},
+  "honey": {"u": ["cup", "Tbsp", "tsp"], "o": [
+    {"n": "Maple Syrup", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Thinner and milder than honey. Swap 1:1.", "p": [["maple syrup", 1, "="]]},
+    {"n": "Agave Nectar", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Mild and a little thinner than honey. Swap 1:1 for a lighter flavor.", "p": [["agave nectar", 1, "="]]},
+    {"n": "Golden Syrup", "r": "1 : 1", "lac": 0, "c": "A similar sticky sweetness. Swap 1:1.", "p": [["golden syrup", 1, "="]]}
+  ]},
+  "salt": {"u": ["tsp", "Tbsp"], "o": [
+    {"n": "Fine Sea Salt", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Fine sea salt measures about the same as table salt. Swap 1:1 and season to taste.", "p": [["fine sea salt", 1, "="]]},
+    {"n": "Kosher Salt", "r": "1 1/2 : 1", "lac": 0, "vg": 1, "c": "Kosher salt has larger flakes, so it takes more by volume. Use 1 1/2 times as much for Morton, or twice as much for Diamond Crystal.", "p": [["kosher salt", 1.5, "="]]}
+  ]},
+  "kosher salt": {"u": "tsp", "o": [
+    {"n": "Table Salt", "r": "2/3 : 1", "lac": 0, "vg": 1, "c": "Table salt is denser than kosher salt, so use about two-thirds as much for Morton, or half as much for Diamond Crystal.", "p": [["table salt", 0.6666667, "tsp"]]},
+    {"n": "Fine Sea Salt", "r": "2/3 : 1", "lac": 0, "vg": 1, "c": "Fine sea salt measures like table salt. Use about two-thirds as much for Morton kosher, or half for Diamond Crystal.", "p": [["fine sea salt", 0.6666667, "tsp"]]}
+  ]},
+  "butter": {"u": ["cup", "Tbsp"], "o": [
+    {"n": "Olive Oil", "r": "3/4 : 1", "lac": 0, "vg": 1, "c": "Oil is all fat while butter is about 80% fat, so use three-quarters as much. Works in savory dishes, cakes, muffins and quick breads, but it won't cream or flake like butter, so skip it for cookies and pastry.", "p": [["olive oil", 0.75, "="]]},
+    {"n": "Coconut Oil", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Solid coconut oil behaves a lot like butter in baking and creaming. Swap 1:1. Refined has a neutral taste; unrefined tastes of coconut.", "p": [["coconut oil", 1, "="]]},
+    {"n": "Margarine", "r": "1 : 1", "lac": 1, "c": "Swap 1:1 using stick margarine. Many brands contain milk solids, so check the label if you need it lactose free.", "p": [["stick margarine", 1, "="]]},
+    {"n": "Vegetable Shortening", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Swap 1:1 for tender baked goods and flaky pastry, but without the buttery flavor.", "p": [["vegetable shortening", 1, "="]]}
+  ]},
+  "olive oil": {"u": "Tbsp", "o": [
+    {"n": "Canola Oil", "r": "1 : 1", "lac": 0, "vg": 1, "c": "A neutral oil for sautéing, roasting and baking. You lose the fruity, peppery olive flavor.", "p": [["canola oil", 1, "Tbsp"]]},
+    {"n": "Butter", "r": "1 : 1", "lac": 1, "c": "Good for sautéing and roasting. Butter browns faster, so use medium heat. Not suited to raw uses like dressings.", "p": [["butter", 1, "Tbsp"]]},
+    {"n": "Coconut Oil", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Use melted refined coconut oil for a neutral taste.", "p": [["coconut oil, melted", 1, "Tbsp"]]}
+  ]},
+  "vegetable oil": {"u": ["cup", "Tbsp"], "o": [
+    {"n": "Olive Oil", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Swap 1:1. Choose a light or mild olive oil for baking so it doesn't overpower.", "p": [["olive oil", 1, "="]]},
+    {"n": "Melted Butter", "r": "1 : 1", "lac": 1, "c": "Melt and cool slightly. Gives a richer, buttery flavor, though butter is part water so the crumb is a touch less moist.", "p": [["melted butter", 1, "="]]},
+    {"n": "Unsweetened Applesauce", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Keeps bakes moist with less fat. Best in muffins, quick breads and cakes; the crumb is denser and browns less.", "p": [["unsweetened applesauce", 1, "="]]},
+    {"n": "Coconut Oil", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Use melted coconut oil. Refined has a neutral taste; unrefined tastes of coconut.", "p": [["coconut oil, melted", 1, "="]]}
+  ]},
+  "milk": {"u": "cup", "o": [
+    {"n": "Half-and-Half", "r": "1 : 1", "lac": 1, "c": "Richer and creamier than milk. Swap 1:1, or thin with a splash of water for a lighter result.", "p": [["half-and-half", 1, "cup"]]},
+    {"n": "Evaporated Milk & Water", "r": "1/2 : 1/2", "lac": 1, "c": "Equal parts evaporated milk and water make a good stand-in for whole milk, with a slightly richer, cooked-milk flavor.", "p": [["evaporated milk", 0.5, "cup"], ["water", 0.5, "cup"]]},
+    {"n": "Almond Milk", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Use unsweetened almond milk in savory dishes. It's thinner and milder than dairy, so sauces may take longer to thicken.", "p": [["unsweetened almond milk", 1, "cup"]]},
+    {"n": "Coconut Milk (Carton)", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Use the thin, drinkable coconut milk sold in cartons, not the canned kind. Adds a faint coconut flavor.", "p": [["coconut milk beverage", 1, "cup"]]},
+    {"n": "Soy Milk", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Swap 1:1 using unsweetened soy milk. It has the most protein of the plant milks, so it behaves best in baking and sauces.", "p": [["unsweetened soy milk", 1, "cup"]]},
+    {"n": "Oat Milk", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Swap 1:1 using unsweetened oat milk. Creamy and slightly sweet.", "p": [["unsweetened oat milk", 1, "cup"]]}
+  ]},
+  "cream cheese": {"u": "cup", "o": [
+    {"n": "Neufchâtel", "r": "1 : 1", "lac": 1, "c": "A slightly softer, lower-fat cream cheese with a near-identical taste. Swap 1:1.", "p": [["Neufchâtel cheese", 1, "cup"]]},
+    {"n": "Mascarpone", "r": "1 : 1", "lac": 1, "c": "Richer, sweeter and less tangy. Works well in frostings, cheesecakes and dips.", "p": [["mascarpone", 1, "cup"]]}
+  ]},
+  "egg": {"u": ["", "large", "beaten"], "o": [
+    {"n": "Flax Egg", "r": "1 Tbsp : 3 Tbsp", "lac": 0, "vg": 1, "c": "Whisk the ground flaxseed into the water and let it sit about 5 minutes until gel-like. Works in cookies, muffins, pancakes and quick breads, but not where eggs are the star.", "p": [["ground flaxseed", 1, "Tbsp"], ["water", 3, "Tbsp"]]},
+    {"n": "Unsweetened Applesauce", "r": "1/4 cup : 1 egg", "lac": 0, "vg": 1, "c": "Adds moisture and some binding to muffins, quick breads and cakes. It adds no lift, so use it where the recipe has other leavening.", "p": [["unsweetened applesauce", 0.25, "cup"]]},
+    {"n": "Mashed Banana", "r": "1/4 cup : 1 egg", "lac": 0, "vg": 1, "c": "Adds moisture and binding along with a banana flavor. Best in pancakes, muffins and quick breads.", "p": [["mashed ripe banana", 0.25, "cup"]]},
+    {"n": "Chia Egg", "r": "1 Tbsp : 3 Tbsp", "lac": 0, "vg": 1, "c": "Stir the chia seeds into the water and let sit about 10 minutes until gel-like. Works like a flax egg in muffins, cookies and pancakes.", "p": [["chia seeds", 1, "Tbsp"], ["water", 3, "Tbsp"]]},
+    {"n": "Aquafaba", "r": "3 Tbsp : 1 egg", "lac": 0, "vg": 1, "c": "The liquid from a can of chickpeas. Whisk lightly before using. Good in cakes, brownies and pancakes.", "p": [["aquafaba", 3, "Tbsp"]]},
+    {"n": "Silken Tofu", "r": "1/4 cup : 1 egg", "lac": 0, "vg": 1, "c": "Blend until completely smooth first. Adds moisture and body to dense cakes, brownies and quick breads.", "p": [["blended silken tofu", 0.25, "cup"]]}
+  ]},
+  "baking powder": {"u": "tsp", "o": [
+    {"n": "Baking Soda & Cream of Tartar", "r": "1/4 tsp : 1/2 tsp", "lac": 0, "vg": 1, "c": "Whisk both into the dry ingredients and bake right away. Make only what the recipe needs.", "p": [["baking soda", 0.25, "tsp"], ["cream of tartar", 0.5, "tsp"]]}
+  ]},
+  "flour": {"u": ["cup", "Tbsp"], "o": [
+    {"n": "Bread Flour", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Higher protein gives a chewier, firmer result. Swap 1:1.", "p": [["bread flour", 1, "="]]},
+    {"n": "Cake Flour", "r": "1 1/8 : 1", "lac": 0, "vg": 1, "c": "Cake flour is lighter, so use about 2 extra tablespoons per cup. Gives a softer, more tender crumb.", "p": [["cake flour", 1.125, "="]]},
+    {"n": "Whole Wheat Flour", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Nuttier and denser. For the lightest result, swap half the flour and keep the rest all-purpose.", "p": [["whole wheat flour", 1, "="]]},
+    {"n": "Gluten-Free Baking Flour", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Use a cup-for-cup blend that already contains xanthan gum. Batters often need a few minutes' rest to hydrate.", "p": [["gluten-free 1:1 baking flour", 1, "="]]}
+  ]},
+  "vanilla extract": {"u": "tsp", "o": [
+    {"n": "Vanilla Bean Paste", "r": "1 : 1", "lac": 0, "c": "Swap 1:1. Adds the tiny black vanilla seeds too.", "p": [["vanilla bean paste", 1, "tsp"]]},
+    {"n": "Almond Extract", "r": "1/2 : 1", "lac": 0, "vg": 1, "c": "Almond extract is stronger than vanilla, so use half as much. Gives a nutty, cherry-like flavor.", "p": [["almond extract", 0.5, "tsp"]]},
+    {"n": "Maple Syrup", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Adds a mild, caramel-like sweetness. Trim a little sugar elsewhere if you can.", "p": [["maple syrup", 1, "tsp"]]},
+    {"n": "Vanilla Bean", "r": "1/3 pod : 1", "lac": 0, "vg": 1, "c": "Split the pod and scrape out the seeds. One bean equals about 1 tablespoon of extract.", "p": [["vanilla bean, seeds scraped", 0.3333333, ""]]}
+  ]},
+  "soy sauce": {"u": ["cup", "Tbsp", "tsp"], "o": [
+    {"n": "Tamari", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Usually made without wheat, so it's the go-to gluten-free swap. Slightly richer and less salty.", "p": [["tamari", 1, "="]]},
+    {"n": "Coconut Aminos", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Milder, sweeter and lower in sodium. Add a pinch of salt to taste.", "p": [["coconut aminos", 1, "="]]}
+  ]},
+  "lemon juice": {"u": ["Tbsp", "tsp"], "o": [
+    {"n": "Lime Juice", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Swap 1:1. Slightly sharper and more floral.", "p": [["lime juice", 1, "="]]},
+    {"n": "Apple Cider Vinegar", "r": "1/2 : 1", "lac": 0, "vg": 1, "c": "Vinegar is more acidic and has no citrus flavor, so use half as much. Better in dressings, marinades and sauces than in desserts.", "p": [["apple cider vinegar", 0.5, "="]]},
+    {"n": "Orange Juice", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Milder and sweeter, so you may want to cut a little sugar elsewhere. Best in baking and glazes.", "p": [["orange juice", 1, "="]]}
+  ]},
+  "garlic": {"u": "cloves", "o": [
+    {"n": "Garlic Powder", "r": "1/8 tsp : 1 clove", "lac": 0, "vg": 1, "c": "About 1/8 teaspoon of garlic powder equals one clove. Stir it into liquid or add it with the dry seasonings so it doesn't scorch.", "p": [["garlic powder", 0.125, "tsp"]]},
+    {"n": "Jarred Minced Garlic", "r": "1/2 tsp : 1 clove", "lac": 0, "vg": 1, "c": "About 1/2 teaspoon of jarred minced garlic equals one clove. Milder than fresh.", "p": [["jarred minced garlic", 0.5, "tsp"]]}
+  ]},
+  "onion": {"u": "cup", "o": [
+    {"n": "Shallots", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Milder and a touch sweeter than onion. Swap chopped shallot 1:1.", "p": [["chopped shallots", 1, "cup"]]},
+    {"n": "Leeks", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Use the well-washed white and light-green parts. Mild and sweet; cook until soft.", "p": [["chopped leeks", 1, "cup"]]},
+    {"n": "Onion Powder", "r": "1 Tbsp : 1 cup", "lac": 0, "vg": 1, "c": "About 1 tablespoon of onion powder replaces one medium onion (roughly 1 cup chopped). Gives flavor but no texture.", "p": [["onion powder", 1, "Tbsp"]]},
+    {"n": "Green Onions", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Milder and fresher. Use the white and green parts, and add them near the end of cooking.", "p": [["chopped green onions", 1, "cup"]]}
+  ]},
+  "chicken stock": {"u": "cup", "o": [
+    {"n": "Vegetable Stock", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Lighter and a little sweeter. Add an extra pinch of salt to taste.", "p": [["vegetable stock", 1, "cup"]]},
+    {"n": "Beef Stock", "r": "1 : 1", "lac": 0, "c": "Deeper, richer flavor. Better in stews, gravies and hearty soups than in delicate dishes.", "p": [["beef stock", 1, "cup"]]},
+    {"n": "Chicken Bouillon & Water", "r": "1 cup : 1 tsp", "lac": 0, "c": "Dissolve 1 teaspoon of bouillon granules (or 1 cube) in each cup of hot water. Bouillon is salty, so go light on added salt.", "p": [["water", 1, "cup"], ["chicken bouillon granules", 1, "tsp"]]}
+  ]},
+  "white wine": {"u": "cup", "o": [
+    {"n": "Chicken Broth & Vinegar", "r": "1 cup : 1 Tbsp", "lac": 0, "c": "The broth adds savory depth and the vinegar replaces the acidity. Good for deglazing and sauces.", "p": [["chicken broth", 1, "cup"], ["white wine vinegar", 1, "Tbsp"]]},
+    {"n": "White Grape Juice & Vinegar", "r": "1 cup : 1 Tbsp", "lac": 0, "vg": 1, "c": "Sweeter than wine, so the vinegar matters. Best in glazes, light sauces and desserts.", "p": [["white grape juice", 1, "cup"], ["white wine vinegar", 1, "Tbsp"]]},
+    {"n": "Dry Vermouth", "r": "1 : 1", "lac": 0, "vg": 1, "c": "A drop-in swap that's a bit more herbal. It still contains alcohol.", "p": [["dry vermouth", 1, "cup"]]}
+  ]},
+  "cilantro": {"u": "Tbsp", "o": [
+    {"n": "Flat-Leaf Parsley", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Milder and grassy rather than citrusy. Add a squeeze of lime juice for a brighter, cilantro-like note.", "p": [["flat-leaf parsley", 1, "Tbsp"]]}
+  ]},
+  "paprika": {"u": ["Tbsp", "tsp"], "o": [
+    {"n": "Smoked Paprika", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Same color with a deeper, smoky flavor. Swap 1:1.", "p": [["smoked paprika", 1, "="]]},
+    {"n": "Chili Powder", "r": "1 : 1", "lac": 0, "vg": 1, "c": "A blend that adds mild heat plus cumin and garlic notes. Swap 1:1.", "p": [["chili powder", 1, "="]]},
+    {"n": "Cayenne Pepper", "r": "1/4 : 1", "lac": 0, "vg": 1, "c": "Much hotter and adds heat rather than color. Start with a quarter of the amount and add to taste.", "p": [["cayenne pepper", 0.25, "="]]}
+  ]},
+  "ground cinnamon": {"u": "tsp", "o": [
+    {"n": "Pumpkin Pie Spice", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Already contains cinnamon plus ginger, nutmeg and clove. Swap 1:1 for a warmer, more complex flavor.", "p": [["pumpkin pie spice", 1, "tsp"]]},
+    {"n": "Apple Pie Spice", "r": "1 : 1", "lac": 0, "vg": 1, "c": "A cinnamon-forward blend with nutmeg and allspice. Swap 1:1.", "p": [["apple pie spice", 1, "tsp"]]}
+  ]},
+  "nutmeg": {"u": "tsp", "o": [
+    {"n": "Allspice", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Warm and slightly peppery with a hint of clove. Swap 1:1.", "p": [["ground allspice", 1, "tsp"]]},
+    {"n": "Mace", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Mace comes from the same fruit as nutmeg and tastes very similar, just a little more delicate. Swap 1:1.", "p": [["ground mace", 1, "tsp"]]},
+    {"n": "Pumpkin Pie Spice", "r": "1 : 1", "lac": 0, "vg": 1, "c": "A blend with cinnamon, ginger and clove along with nutmeg. Swap 1:1.", "p": [["pumpkin pie spice", 1, "tsp"]]}
+  ]},
+  "buttermilk": {"u": "cup", "o": [
+    {"n": "Milk & Lemon Juice", "r": "1 cup : 1 Tbsp", "lac": 1, "c": "Stir the lemon juice into the milk and let it stand 5 minutes until slightly curdled. Use a scant cup of milk if you want it exact.", "p": [["milk", 1, "cup"], ["lemon juice", 1, "Tbsp"]]},
+    {"n": "Plain Yogurt & Milk", "r": "3/4 : 1/4", "lac": 1, "c": "Whisk the yogurt and milk together until smooth and pourable.", "p": [["plain yogurt", 0.75, "cup"], ["milk", 0.25, "cup"]]},
+    {"n": "Sour Cream & Milk", "r": "3/4 : 1/4", "lac": 1, "c": "Whisk the sour cream and milk together until smooth and pourable.", "p": [["sour cream", 0.75, "cup"], ["milk", 0.25, "cup"]]},
+    {"n": "Soy Milk & Lemon Juice", "r": "1 cup : 1 Tbsp", "lac": 0, "vg": 1, "c": "Stir the lemon juice into unsweetened soy milk and let it stand 5 minutes until it thickens slightly.", "p": [["unsweetened soy milk", 1, "cup"], ["lemon juice", 1, "Tbsp"]]}
+  ]},
+  "sour cream": {"u": "cup", "o": [
+    {"n": "Plain Greek Yogurt", "r": "1 : 1", "lac": 1, "c": "Thick and tangy. Swap 1:1; full-fat works best, and stir it in off the heat so it doesn't curdle.", "p": [["plain Greek yogurt", 1, "cup"]]},
+    {"n": "Crème Fraîche", "r": "1 : 1", "lac": 1, "c": "Richer and a little less tangy, and it won't curdle in hot dishes. Swap 1:1.", "p": [["crème fraîche", 1, "cup"]]},
+    {"n": "Cream Cheese, Thinned", "r": "1 : 1", "lac": 1, "c": "Soften the cream cheese and whisk in a splash of milk until it's the texture of sour cream.", "p": [["cream cheese", 1, "cup"]]}
+  ]},
+  "greek yogurt": {"u": "cup", "o": [
+    {"n": "Sour Cream", "r": "1 : 1", "lac": 1, "c": "A little richer and less tangy. Swap 1:1.", "p": [["sour cream", 1, "cup"]]},
+    {"n": "Strained Plain Yogurt", "r": "1 : 1", "lac": 1, "c": "Strain regular plain yogurt through cheesecloth or a coffee filter for an hour or two until it's thick.", "p": [["plain yogurt, strained", 1, "cup"]]},
+    {"n": "Coconut Yogurt", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Use unsweetened coconut yogurt. Dairy free, with a mild coconut flavor.", "p": [["unsweetened coconut yogurt", 1, "cup"]]}
+  ]},
+  "coconut cream": {"u": "cup", "o": [
+    {"n": "Full-Fat Coconut Milk", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Chill a can overnight and scoop off the thick cream that rises to the top.", "p": [["full-fat coconut milk, chilled", 1, "cup"]]},
+    {"n": "Heavy Cream", "r": "1 : 1", "lac": 1, "c": "Swap 1:1 for a dairy version of the same richness.", "p": [["heavy cream", 1, "cup"]]}
+  ]},
+  "half-and-half": {"u": "cup", "o": [
+    {"n": "Whole Milk & Heavy Cream", "r": "1/2 : 1/2", "lac": 1, "c": "Equal parts milk and cream is exactly what half-and-half is.", "p": [["whole milk", 0.5, "cup"], ["heavy cream", 0.5, "cup"]]},
+    {"n": "Whole Milk & Butter", "r": "7/8 cup : 1 1/2 Tbsp", "lac": 1, "c": "Melt the butter and whisk it into the milk.", "p": [["whole milk", 0.875, "cup"], ["butter, melted", 1.5, "Tbsp"]]},
+    {"n": "Evaporated Milk", "r": "1 : 1", "lac": 1, "c": "Slightly less rich, with a cooked-milk flavor. Swap 1:1.", "p": [["evaporated milk", 1, "cup"]]}
+  ]},
+  "mayonnaise": {"u": ["cup", "Tbsp", "tsp"], "o": [
+    {"n": "Plain Greek Yogurt", "r": "1 : 1", "lac": 1, "c": "Tangier and lighter. Swap 1:1 in dressings, dips and salads.", "p": [["plain Greek yogurt", 1, "="]]},
+    {"n": "Sour Cream", "r": "1 : 1", "lac": 1, "c": "Tangy and creamy. Swap 1:1 in dips, dressings and salads.", "p": [["sour cream", 1, "="]]}
+  ]},
+  "ricotta cheese": {"u": "cup", "o": [
+    {"n": "Cottage Cheese", "r": "1 : 1", "lac": 1, "c": "Drain it, and blend it if you want a smooth texture like ricotta.", "p": [["cottage cheese", 1, "cup"]]}
+  ]},
+  "cottage cheese": {"u": "cup", "o": [
+    {"n": "Ricotta Cheese", "r": "1 : 1", "lac": 1, "c": "Creamier and milder. Swap 1:1.", "p": [["ricotta cheese", 1, "cup"]]}
+  ]},
+  "parmesan": {"u": "cup", "o": [
+    {"n": "Pecorino Romano", "r": "1 : 1", "lac": 1, "c": "Saltier and sharper, so go easy on added salt.", "p": [["grated Pecorino Romano", 1, "cup"]]},
+    {"n": "Asiago", "r": "1 : 1", "lac": 1, "c": "Aged asiago is nutty and close to Parmesan.", "p": [["grated aged asiago", 1, "cup"]]},
+    {"n": "Grana Padano", "r": "1 : 1", "lac": 1, "c": "Very similar to Parmesan, a little milder and softer.", "p": [["grated Grana Padano", 1, "cup"]]}
+  ]},
+  "mozzarella": {"u": "cup", "o": [
+    {"n": "Provolone", "r": "1 : 1", "lac": 1, "c": "Melts well with a little more flavor.", "p": [["shredded provolone", 1, "cup"]]},
+    {"n": "Monterey Jack", "r": "1 : 1", "lac": 1, "c": "Mild and melty. Swap 1:1.", "p": [["shredded Monterey Jack", 1, "cup"]]}
+  ]},
+  "cheddar cheese": {"u": "cup", "o": [
+    {"n": "Colby Cheese", "r": "1 : 1", "lac": 1, "c": "Milder and softer than cheddar, but it melts the same way.", "p": [["shredded Colby cheese", 1, "cup"]]}
+  ]},
+  "powdered sugar": {"u": "cup", "o": [
+    {"n": "Granulated Sugar & Cornstarch", "r": "1 cup : 1 tsp", "lac": 0, "c": "Blend in a blender or spice grinder until powdery. The cornstarch stops it from clumping.", "p": [["granulated sugar", 1, "cup"], ["cornstarch", 1, "tsp"]]}
+  ]},
+  "maple syrup": {"u": ["cup", "Tbsp", "tsp"], "o": [
+    {"n": "Honey", "r": "1 : 1", "lac": 0, "c": "Swap 1:1. Honey is a little sweeter, with a floral flavor.", "p": [["honey", 1, "="]]},
+    {"n": "Agave Nectar", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Swap 1:1 for a milder, thinner sweetness.", "p": [["agave nectar", 1, "="]]}
+  ]},
+  "corn syrup": {"u": ["cup", "Tbsp", "tsp"], "o": [
+    {"n": "Maple Syrup", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Swap 1:1 for a thinner syrup with maple flavor. Not suited to candy-making.", "p": [["maple syrup", 1, "="]]},
+    {"n": "Golden Syrup", "r": "1 : 1", "lac": 0, "c": "Swap 1:1. Very similar in texture and sweetness.", "p": [["golden syrup", 1, "="]]}
+  ]},
+  "baking soda": {"u": "tsp", "o": [
+    {"n": "Baking Powder", "r": "3 : 1", "lac": 0, "vg": 1, "c": "Baking powder is weaker, so use three times as much. Cut back on any added salt, and expect a slightly different flavor.", "p": [["baking powder", 3, "tsp"]]}
+  ]},
+  "cream of tartar": {"u": "tsp", "o": [
+    {"n": "Lemon Juice", "r": "2 : 1", "lac": 0, "vg": 1, "c": "Use 2 teaspoons per teaspoon of cream of tartar to stabilize whipped egg whites.", "p": [["lemon juice", 2, "tsp"]]},
+    {"n": "White Vinegar", "r": "2 : 1", "lac": 0, "vg": 1, "c": "Use 2 teaspoons per teaspoon of cream of tartar to stabilize whipped egg whites.", "p": [["white vinegar", 2, "tsp"]]}
+  ]},
+  "vanilla pod": {"u": [""], "o": [
+    {"n": "Vanilla Extract", "r": "1 Tbsp : 1 pod", "lac": 0, "vg": 1, "c": "One vanilla pod is about 1 tablespoon of extract. Add it near the end of cooking.", "p": [["vanilla extract", 1, "Tbsp"]]},
+    {"n": "Vanilla Bean Paste", "r": "1 Tbsp : 1 pod", "lac": 0, "vg": 1, "c": "One vanilla pod is about 1 tablespoon of paste, and the paste includes the seeds.", "p": [["vanilla bean paste", 1, "Tbsp"]]}
+  ]},
+  "egg white": {"u": ["", "large"], "o": [
+    {"n": "Aquafaba", "r": "2 Tbsp : 1 white", "lac": 0, "vg": 1, "c": "Whips up like egg white. Use the liquid from a can of chickpeas.", "p": [["aquafaba", 2, "Tbsp"]]},
+    {"n": "Meringue Powder & Water", "r": "1 Tbsp : 2 Tbsp", "lac": 0, "c": "Whisk the powder into the water first. Works for meringue and royal icing.", "p": [["meringue powder", 1, "Tbsp"], ["water", 2, "Tbsp"]]}
+  ]},
+  "breadcrumbs": {"u": "g", "o": [
+    {"n": "Crushed Crackers", "r": "1 : 1", "lac": 0, "c": "Crush plain crackers finely. Swap by weight.", "p": [["crushed crackers", 1, "="]]},
+    {"n": "Ground Rolled Oats", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Pulse rolled oats in a blender until crumbly. Swap by weight.", "p": [["ground rolled oats", 1, "="]]},
+    {"n": "Matzo Meal", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Swap by weight.", "p": [["matzo meal", 1, "="]]}
+  ]},
+  "vegetable shortening": {"u": ["cup", "Tbsp"], "o": [
+    {"n": "Butter", "r": "1 : 1", "lac": 1, "c": "Swap 1:1. Butter adds flavor but spreads more in cookies.", "p": [["butter", 1, "="]]},
+    {"n": "Margarine", "r": "1 : 1", "lac": 1, "c": "Swap 1:1 using stick margarine. Check the label if you need it lactose free.", "p": [["stick margarine", 1, "="]]},
+    {"n": "Coconut Oil", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Solid coconut oil acts like shortening. Refined has a neutral taste.", "p": [["coconut oil", 1, "="]]}
+  ]},
+  "cocoa powder": {"u": ["cup", "Tbsp", "tsp"], "o": [
+    {"n": "Carob Powder", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Naturally sweeter and caffeine free, with a milder, earthier flavor.", "p": [["carob powder", 1, "="]]}
+  ]},
+  "dark chocolate": {"u": "g", "o": [
+    {"n": "Semisweet Chocolate", "r": "1 : 1", "lac": 0, "c": "A little sweeter. Swap by weight.", "p": [["semisweet chocolate", 1, "="]]}
+  ]},
+  "marzipan": {"u": "g", "o": [
+    {"n": "Almond Paste", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Less sweet, with a stronger almond flavor. Swap by weight and add a little sugar if needed.", "p": [["almond paste", 1, "="]]}
+  ]},
+  "tomato paste": {"u": "Tbsp", "o": [
+    {"n": "Ketchup", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Sweeter and tangier. Fine in a pinch for sauces and braises.", "p": [["ketchup", 1, "Tbsp"]]},
+    {"n": "Tomato Sauce", "r": "3 : 1", "lac": 0, "vg": 1, "c": "Simmer the sauce down until thick and cut other liquid in the recipe to match.", "p": [["tomato sauce", 3, "Tbsp"]]}
+  ]},
+  "tomato puree": {"u": ["Tbsp", "cup"], "o": [
+    {"n": "Tomato Sauce", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Swap 1:1. Slightly thinner and more seasoned.", "p": [["tomato sauce", 1, "="]]},
+    {"n": "Tomato Paste & Water", "r": "1/2 : 1/2", "lac": 0, "vg": 1, "c": "Whisk equal parts paste and water until smooth.", "p": [["tomato paste", 0.5, "="], ["water", 0.5, "="]]}
+  ]},
+  "mustard": {"u": "Tbsp", "o": [
+    {"n": "Dijon Mustard", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Sharper and more complex. Swap 1:1.", "p": [["Dijon mustard", 1, "Tbsp"]]},
+    {"n": "Yellow Mustard", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Milder and tangier. Swap 1:1.", "p": [["yellow mustard", 1, "Tbsp"]]}
+  ]},
+  "rice vinegar": {"u": ["cup", "Tbsp", "tsp"], "o": [
+    {"n": "White Vinegar", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Sharper, so add a pinch of sugar to balance it.", "p": [["white vinegar", 1, "="]]},
+    {"n": "Apple Cider Vinegar", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Fruitier and a little stronger. Swap 1:1.", "p": [["apple cider vinegar", 1, "="]]},
+    {"n": "White Wine Vinegar", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Slightly sharper. Swap 1:1.", "p": [["white wine vinegar", 1, "="]]}
+  ]},
+  "red wine vinegar": {"u": ["cup", "Tbsp", "tsp"], "o": [
+    {"n": "Balsamic Vinegar", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Sweeter and darker. Swap 1:1.", "p": [["balsamic vinegar", 1, "="]]},
+    {"n": "Apple Cider Vinegar", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Fruitier and a touch milder. Swap 1:1.", "p": [["apple cider vinegar", 1, "="]]},
+    {"n": "White Wine Vinegar", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Lighter in color and flavor. Swap 1:1.", "p": [["white wine vinegar", 1, "="]]}
+  ]},
+  "lime juice": {"u": ["cup", "Tbsp", "tsp"], "o": [
+    {"n": "Lemon Juice", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Swap 1:1. Slightly less sharp and more sweet.", "p": [["lemon juice", 1, "="]]}
+  ]},
+  "orange juice": {"u": "cup", "o": [
+    {"n": "Pineapple Juice", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Sweeter and tropical. Swap 1:1.", "p": [["pineapple juice", 1, "cup"]]},
+    {"n": "Apple Juice", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Milder and sweeter, with less acidity. Swap 1:1.", "p": [["apple juice", 1, "cup"]]}
+  ]},
+  "oyster sauce": {"u": "Tbsp", "o": [
+    {"n": "Hoisin Sauce", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Sweeter and thicker, with less savory depth. Swap 1:1.", "p": [["hoisin sauce", 1, "Tbsp"]]},
+    {"n": "Soy Sauce & Sugar", "r": "1 Tbsp : 1/2 tsp", "lac": 0, "vg": 1, "c": "Stir the sugar into the soy sauce for a salty-sweet stand-in.", "p": [["soy sauce", 1, "Tbsp"], ["sugar", 0.5, "tsp"]]}
+  ]},
+  "fish sauce": {"u": ["cup", "Tbsp", "tsp"], "o": [
+    {"n": "Soy Sauce", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Less pungent. Add a squeeze of lime juice for brightness.", "p": [["soy sauce", 1, "="]]},
+    {"n": "Oyster Sauce", "r": "1 : 1", "lac": 0, "c": "Sweeter and thicker. Swap 1:1.", "p": [["oyster sauce", 1, "="]]}
+  ]},
+  "worcestershire sauce": {"u": ["cup", "Tbsp", "tsp"], "o": [
+    {"n": "Soy Sauce", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Saltier and less tangy. Add a drop of vinegar if you have it.", "p": [["soy sauce", 1, "="]]}
+  ]},
+  "shaoxing wine": {"u": "Tbsp", "o": [
+    {"n": "Dry Sherry", "r": "1 : 1", "lac": 0, "vg": 1, "c": "The closest common stand-in. Swap 1:1.", "p": [["dry sherry", 1, "Tbsp"]]},
+    {"n": "Sake", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Lighter and a little sweeter. Swap 1:1.", "p": [["sake", 1, "Tbsp"]]}
+  ]},
+  "coconut milk": {"u": "cup", "o": [
+    {"n": "Coconut Cream & Water", "r": "1/2 : 1/2", "lac": 0, "vg": 1, "c": "Whisk equal parts coconut cream and water until smooth.", "p": [["coconut cream", 0.5, "cup"], ["water", 0.5, "cup"]]}
+  ]},
+  "vegetable stock": {"u": "cup", "o": [
+    {"n": "Chicken Stock", "r": "1 : 1", "lac": 0, "c": "Richer and more savory. Swap 1:1.", "p": [["chicken stock", 1, "cup"]]}
+  ]},
+  "tahini": {"u": ["cup", "Tbsp", "tsp"], "o": [
+    {"n": "Peanut Butter", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Stronger and sweeter. Use smooth, unsweetened.", "p": [["smooth peanut butter", 1, "="]]},
+    {"n": "Almond Butter", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Milder and slightly sweet. Swap 1:1.", "p": [["almond butter", 1, "="]]},
+    {"n": "Sunflower Seed Butter", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Nut free and close in flavor. Swap 1:1.", "p": [["sunflower seed butter", 1, "="]]}
+  ]},
+  "peanut butter": {"u": ["cup", "Tbsp", "tsp"], "o": [
+    {"n": "Almond Butter", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Milder and a little less sweet. Swap 1:1.", "p": [["almond butter", 1, "="]]},
+    {"n": "Sunflower Seed Butter", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Nut free. Swap 1:1.", "p": [["sunflower seed butter", 1, "="]]},
+    {"n": "Tahini", "r": "1 : 1", "lac": 0, "vg": 1, "c": "More bitter and savory. Add a little sugar if needed.", "p": [["tahini", 1, "="]]}
+  ]},
+  "shallot": {"u": "cup", "o": [
+    {"n": "Yellow Onion", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Stronger than shallot. Swap 1:1 and cook a little longer to mellow it.", "p": [["chopped yellow onion", 1, "cup"]]},
+    {"n": "Red Onion", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Sharper when raw but sweet once cooked. Swap 1:1.", "p": [["chopped red onion", 1, "cup"]]},
+    {"n": "Green Onions", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Milder and fresher. Add near the end of cooking.", "p": [["chopped green onions", 1, "cup"]]}
+  ]},
+  "green onion": {"u": ["cup", "Tbsp"], "o": [
+    {"n": "Chives", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Milder and more delicate. Add at the end.", "p": [["chopped chives", 1, "="]]},
+    {"n": "Shallots", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Sweeter and a little sharper. Swap 1:1.", "p": [["chopped shallots", 1, "="]]},
+    {"n": "Red Onion", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Sharper. Use less if eating raw.", "p": [["chopped red onion", 1, "="]]}
+  ]},
+  "kale": {"u": "pound", "o": [
+    {"n": "Spinach", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Much more tender, so cook it for less time.", "p": [["spinach", 1, "pound"]]},
+    {"n": "Collard Greens", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Tougher and a little milder. Cook a bit longer.", "p": [["collard greens", 1, "pound"]]}
+  ]},
+  "brown rice": {"u": "cup", "o": [
+    {"n": "White Rice", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Cooks faster, so shorten the cooking time.", "p": [["white rice", 1, "cup"]]},
+    {"n": "Quinoa", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Nutty and high in protein. Cook until the little tails pop out.", "p": [["quinoa", 1, "cup"]]},
+    {"n": "Barley", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Chewy and hearty. Pearled barley cooks in about 30 minutes.", "p": [["pearled barley", 1, "cup"]]}
+  ]},
+  "jasmine rice": {"u": "cup", "o": [
+    {"n": "Basmati Rice", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Drier, with separate grains. Swap 1:1.", "p": [["basmati rice", 1, "cup"]]}
+  ]},
+  "ground ginger": {"u": "tsp", "o": [
+    {"n": "Fresh Ginger", "r": "1 Tbsp : 1 tsp", "lac": 0, "vg": 1, "c": "Grate fresh ginger. About 1 tablespoon replaces 1 teaspoon of ground. Brighter and sharper.", "p": [["freshly grated ginger", 1, "Tbsp"]]},
+    {"n": "Allspice", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Works in baking. Warm and sweet with a hint of clove.", "p": [["ground allspice", 1, "tsp"]]}
+  ]},
+  "cumin": {"u": ["tsp", "Tbsp"], "o": [
+    {"n": "Chili Powder", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Contains cumin along with mild chile and garlic. Swap 1:1.", "p": [["chili powder", 1, "="]]},
+    {"n": "Curry Powder", "r": "1 : 1", "lac": 0, "vg": 1, "c": "A warm blend that includes cumin. Swap 1:1.", "p": [["curry powder", 1, "="]]}
+  ]},
+  "dill": {"u": ["Tbsp", "tsp"], "o": [
+    {"n": "Flat-Leaf Parsley", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Milder and grassy. Add a little lemon zest to echo dill's brightness.", "p": [["flat-leaf parsley", 1, "="]]},
+    {"n": "Fresh Mint", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Cooler and sweeter. Works best in yogurt and cucumber dishes.", "p": [["fresh mint", 1, "="]]}
+  ]},
+  "black pepper": {"u": ["tsp", "Tbsp"], "o": [
+    {"n": "White Pepper", "r": "1 : 1", "lac": 0, "vg": 1, "c": "A little hotter and earthier, with no black flecks. Swap 1:1.", "p": [["white pepper", 1, "="]]},
+    {"n": "Cayenne Pepper", "r": "1/4 : 1", "lac": 0, "vg": 1, "c": "Much hotter and adds heat, not black pepper's bite. Start with a quarter and taste.", "p": [["cayenne pepper", 0.25, "="]]}
+  ]},
+  "red pepper flakes": {"u": ["tsp", "Tbsp"], "o": [
+    {"n": "Cayenne Pepper", "r": "1/4 : 1", "lac": 0, "vg": 1, "c": "Finer and hotter than flakes. Start with a quarter of the amount and taste.", "p": [["cayenne pepper", 0.25, "="]]}
+  ]},
+  "allspice": {"u": "tsp", "o": [
+    {"n": "Pumpkin Pie Spice", "r": "1 : 1", "lac": 0, "vg": 1, "c": "A blend of cinnamon, ginger, nutmeg and clove. Swap 1:1.", "p": [["pumpkin pie spice", 1, "tsp"]]},
+    {"n": "Nutmeg", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Warm and nutty. Swap 1:1.", "p": [["ground nutmeg", 1, "tsp"]]}
+  ]},
+  "thyme": {"u": ["tsp", "Tbsp"], "o": [
+    {"n": "Oregano", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Earthier and a little stronger. Swap 1:1.", "p": [["oregano", 1, "="]]},
+    {"n": "Italian Seasoning", "r": "1 : 1", "lac": 0, "vg": 1, "c": "A blend that includes thyme. Swap 1:1.", "p": [["Italian seasoning", 1, "="]]},
+    {"n": "Poultry Seasoning", "r": "1 : 1", "lac": 0, "vg": 1, "c": "A blend of sage, thyme and marjoram. Great with chicken and stuffing.", "p": [["poultry seasoning", 1, "="]]}
+  ]},
+  "oregano": {"u": ["tsp", "Tbsp"], "o": [
+    {"n": "Italian Seasoning", "r": "1 : 1", "lac": 0, "vg": 1, "c": "A blend that includes oregano. Swap 1:1.", "p": [["Italian seasoning", 1, "="]]},
+    {"n": "Thyme", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Milder and more lemony. Swap 1:1.", "p": [["thyme", 1, "="]]},
+    {"n": "Marjoram", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Sweeter and more delicate, and the closest relative. Swap 1:1.", "p": [["marjoram", 1, "="]]}
+  ]},
+  "rosemary": {"u": ["tsp", "Tbsp"], "o": [
+    {"n": "Thyme", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Gentler and less piney. Swap 1:1.", "p": [["thyme", 1, "="]]},
+    {"n": "Sage", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Earthy and peppery. Use a little less if it's very fresh.", "p": [["sage", 1, "="]]}
+  ]},
+  "sage": {"u": ["tsp", "Tbsp"], "o": [
+    {"n": "Poultry Seasoning", "r": "1 : 1", "lac": 0, "vg": 1, "c": "A blend where sage is the main flavor. Swap 1:1.", "p": [["poultry seasoning", 1, "="]]},
+    {"n": "Rosemary", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Piney and strong. Use a little less and chop it fine.", "p": [["rosemary", 1, "="]]},
+    {"n": "Thyme", "r": "1 : 1", "lac": 0, "vg": 1, "c": "Milder and earthy. Swap 1:1.", "p": [["thyme", 1, "="]]}
+  ]}
+}

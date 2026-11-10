@@ -1,17 +1,91 @@
 "use strict";
 /*  Shared data & helpers l */
-let RECS = [], NAMES = [], S = {};
+let RECS = [], NAMES = [], S = {}, ALIAS = {};
 const NAME = { "heavy cream": "Heavy Whipping Cream" };
 const BOOK = [
   ["Evaporated Milk", "evaporated milk", "Evaporated milk is a fatty, shelf stable milk that has had 60% of the water removed from it"],
-  ["Butter", "", "Butter is made of the fat and protein of churned cream"],
-  ["Milk", "", "Milk is a nutritious food product from mammals"],
-  ["Coconut Cream", "", "Coconut cream is a thick and creamy unsweetened ingredient. The sweetened version is called cream of coconut."],
+  ["Butter", "butter", "Butter is made of the fat and protein of churned cream"],
+  ["Milk", "milk", "Milk is a nutritious food product from mammals"],
+  ["Coconut Cream", "coconut cream", "Coconut cream is a thick and creamy unsweetened ingredient. The sweetened version is called cream of coconut."],
   ["Cornstarch", "cornstarch", "Cornstarch is the starch powder from the corn grain, used to thicken dishes and make syrups"],
-  ["Greek Yogurt", "", "Greek yogurt is a thick, protein-rich nutritious yogurt with various kinds to choose from"],
+  ["Greek Yogurt", "greek yogurt", "Greek yogurt is a thick, protein-rich nutritious yogurt with various kinds to choose from"],
   ["Heavy Whipping Cream", "heavy cream", "Heavy whipping cream is a rich cream with a milk fat content of about 36% or more"],
-  ["Self-Rising Flour", "self-rising flour", "Self-rising flour is all-purpose flour with baking powder and salt already mixed in"]
+  ["Self-Rising Flour", "self-rising flour", "Self-rising flour is all-purpose flour with baking powder and salt already mixed in"],
+  ["Sugar", "sugar", "Granulated sugar is refined cane or beet sugar, used to sweeten and to help baked goods brown and stay tender"],
+  ["Brown Sugar", "brown sugar", "Brown sugar is white sugar with molasses, which makes it moist and gives it a caramel flavor"],
+  ["Honey", "honey", "Honey is a thick, sweet syrup made by bees from flower nectar"],
+  ["Salt", "salt", "Table salt is fine-grained sodium chloride, used to season food and sharpen other flavors"],
+  ["Kosher Salt", "kosher salt", "Kosher salt is a coarse, flaky salt that is easy to pinch and measures lighter than table salt"],
+  ["Olive Oil", "olive oil", "Olive oil is pressed from olives and is used for sautéing, roasting and dressings"],
+  ["Vegetable Oil", "vegetable oil", "Vegetable oil is a neutral, liquid cooking oil used for frying and baking"],
+  ["Cream Cheese", "cream cheese", "Cream cheese is a soft, tangy fresh cheese made from milk and cream"],
+  ["Egg", "egg", "Eggs bind, thicken and help baked goods rise and set"],
+  ["Baking Powder", "baking powder", "Baking powder is a mix of baking soda and a dry acid that makes batters rise"],
+  ["All-Purpose Flour", "flour", "All-purpose flour is a medium-protein wheat flour used for everything from cakes to sauces"],
+  ["Vanilla Extract", "vanilla extract", "Vanilla extract is made by soaking vanilla beans in alcohol and gives a warm, sweet aroma"],
+  ["Soy Sauce", "soy sauce", "Soy sauce is a salty, savory sauce made from fermented soybeans and wheat"],
+  ["Lemon Juice", "lemon juice", "Lemon juice adds bright acidity to sauces, dressings and baked goods"],
+  ["Garlic", "garlic", "Garlic is a pungent bulb whose cloves are minced, sliced or crushed to flavor savory dishes"],
+  ["Onion", "onion", "Onion is a savory, slightly sweet base flavor for soups, sauces and stir-fries"],
+  ["Chicken Stock", "chicken stock", "Chicken stock is a savory liquid simmered from chicken and aromatics"],
+  ["White Wine", "white wine", "White wine adds acidity and depth to sauces and is often used to deglaze a pan"],
+  ["Cilantro", "cilantro", "Cilantro is a fresh, citrusy herb used in Mexican, Indian and Southeast Asian cooking"],
+  ["Paprika", "paprika", "Paprika is a ground red pepper spice that adds color and mild, sweet flavor"],
+  ["Ground Cinnamon", "ground cinnamon", "Ground cinnamon is a warm, sweet spice made from dried tree bark"],
+  ["Nutmeg", "nutmeg", "Nutmeg is a warm, nutty spice ground from the seed of a tropical tree"],
+  ["Buttermilk", "buttermilk", "Buttermilk is a tangy, cultured milk that makes baked goods tender and helps them rise"],
+  ["Sour Cream", "sour cream", "Sour cream is cream thickened and soured with bacteria, used in dips, sauces and baking"],
+  ["Half-and-Half", "half-and-half", "Half-and-half is equal parts whole milk and cream, richer than milk and lighter than cream"],
+  ["Mayonnaise", "mayonnaise", "Mayonnaise is an emulsion of oil, egg yolk and acid used in sandwiches, dressings and salads"],
+  ["Ricotta Cheese", "ricotta cheese", "Ricotta is a soft, mild, slightly sweet fresh cheese made from whey"],
+  ["Cottage Cheese", "cottage cheese", "Cottage cheese is a fresh cheese of soft white curds in a light cream"],
+  ["Parmesan", "parmesan", "Parmesan is a hard, salty, nutty aged cheese, usually grated"],
+  ["Mozzarella", "mozzarella", "Mozzarella is a mild, stretchy cheese that melts well"],
+  ["Cheddar Cheese", "cheddar cheese", "Cheddar is a firm, sharp cheese that melts smoothly"],
+  ["Powdered Sugar", "powdered sugar", "Powdered sugar is finely ground sugar, used for frostings, glazes and dusting"],
+  ["Maple Syrup", "maple syrup", "Maple syrup is a sweet syrup boiled down from the sap of maple trees"],
+  ["Corn Syrup", "corn syrup", "Corn syrup is a thick, mild syrup that keeps sweets smooth and stops sugar crystallizing"],
+  ["Baking Soda", "baking soda", "Baking soda is a leavener that needs an acid in the recipe to make batters rise"],
+  ["Cream of Tartar", "cream of tartar", "Cream of tartar is a mild acid used to stabilize whipped egg whites and activate baking soda"],
+  ["Vanilla Pod", "vanilla pod", "A vanilla pod, or bean, is the cured seed pod of an orchid, with seeds that give a rich vanilla flavor"],
+  ["Egg White", "egg white", "Egg white is the clear protein part of the egg, whipped for meringues and used to bind and lighten"],
+  ["Breadcrumbs", "breadcrumbs", "Breadcrumbs are dried, crushed bread used for coating, binding and topping"],
+  ["Vegetable Shortening", "vegetable shortening", "Vegetable shortening is a solid, flavorless fat that makes pastry and baked goods tender"],
+  ["Cocoa Powder", "cocoa powder", "Cocoa powder is ground, defatted roasted cacao used for chocolate flavor in baking"],
+  ["Dark Chocolate", "dark chocolate", "Dark chocolate has a high percentage of cacao and little to no milk"],
+  ["Marzipan", "marzipan", "Marzipan is a sweet paste of ground almonds and sugar used in confections and cakes"],
+  ["Tomato Paste", "tomato paste", "Tomato paste is cooked-down, concentrated tomato that adds deep flavor"],
+  ["Tomato Puree", "tomato puree", "Tomato puree is cooked, strained tomatoes with a smooth, thick texture"],
+  ["Mustard", "mustard", "Mustard is a tangy paste of ground mustard seeds, vinegar and spices"],
+  ["Rice Vinegar", "rice vinegar", "Rice vinegar is a mild, slightly sweet vinegar used in Asian dressings and sushi rice"],
+  ["Red Wine Vinegar", "red wine vinegar", "Red wine vinegar is a tangy vinegar with a fruity flavor, used in dressings and marinades"],
+  ["Lime Juice", "lime juice", "Lime juice is a sharp, fragrant citrus juice used in dressings, marinades and drinks"],
+  ["Orange Juice", "orange juice", "Orange juice is a sweet, tangy citrus juice used in drinks, glazes and baking"],
+  ["Oyster Sauce", "oyster sauce", "Oyster sauce is a thick, savory-sweet sauce made from cooked oysters"],
+  ["Fish Sauce", "fish sauce", "Fish sauce is a salty, pungent sauce of fermented fish used across Southeast Asian cooking"],
+  ["Worcestershire Sauce", "worcestershire sauce", "Worcestershire is a tangy, savory sauce of fermented ingredients used in marinades and stews"],
+  ["Shaoxing Wine", "shaoxing wine", "Shaoxing wine is a Chinese rice wine used to add depth to stir-fries and braises"],
+  ["Coconut Milk", "coconut milk", "Coconut milk is made from grated coconut flesh and water, thinner than coconut cream"],
+  ["Vegetable Stock", "vegetable stock", "Vegetable stock is a light liquid simmered from vegetables and herbs"],
+  ["Tahini", "tahini", "Tahini is a paste of ground sesame seeds used in hummus and dressings"],
+  ["Peanut Butter", "peanut butter", "Peanut butter is a spread of ground roasted peanuts"],
+  ["Shallot", "shallot", "Shallots are small, mild, slightly sweet members of the onion family"],
+  ["Green Onion", "green onion", "Green onions, also called scallions, are mild onions eaten raw or cooked, both the white and green parts"],
+  ["Kale", "kale", "Kale is a sturdy, leafy green that holds up to long cooking"],
+  ["Brown Rice", "brown rice", "Brown rice is whole-grain rice with the bran left on, chewier and nuttier than white"],
+  ["Jasmine Rice", "jasmine rice", "Jasmine rice is a fragrant long-grain rice that cooks up soft and slightly sticky"],
+  ["Ground Ginger", "ground ginger", "Ground ginger is dried ginger root, warm and spicy, common in baking"],
+  ["Cumin", "cumin", "Cumin is an earthy, warm spice used in Mexican, Indian and Middle Eastern cooking"],
+  ["Dill", "dill", "Dill is a feathery herb with a fresh, grassy, slightly anise flavor"],
+  ["Black Pepper", "black pepper", "Black pepper is a pungent, sharp spice from dried peppercorns"],
+  ["Red Pepper Flakes", "red pepper flakes", "Red pepper flakes are crushed dried chiles that add heat"],
+  ["Allspice", "allspice", "Allspice is a warm spice that tastes like cinnamon, nutmeg and clove together"],
+  ["Thyme", "thyme", "Thyme is a small-leaved herb with an earthy, slightly minty flavor"],
+  ["Oregano", "oregano", "Oregano is a robust, peppery herb common in Italian and Greek cooking"],
+  ["Rosemary", "rosemary", "Rosemary is a piney, aromatic herb that pairs with roasts and potatoes"],
+  ["Sage", "sage", "Sage is an earthy, peppery herb often used with poultry and pork"]
 ];
+BOOK.sort((x, y) => x[0].localeCompare(y[0]));   // alphabetical
 
 const $ = id => document.getElementById(id);
 const ld = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) || d } catch (e) { return d } };
@@ -30,15 +104,22 @@ function f(n) {
   const e = Math.round(n * 8), w = Math.floor(e / 8), r = e % 8;
   return (w || !r ? w : "") + FR[r];
 }
-const fq = (q, u) => f(q) + (u ? " " + (u === "cup" && q > 1 ? "cups" : u) : "");
+const fq = (q, u) => f(q) + (u ? " " + (u === "cup" && q > 1.001 ? "cups" : u) : "");
 
 // Substitutions live only in memory, so leaving (or reloading) a recipe discards them.
 let applied = {}, checked = ld("sf.checked", {});
 try { localStorage.removeItem("sf.applied"); } catch (e) {}  // clear any older saved substitutions
 
 const lt = i => (i.q == null ? (i.raw ? i.raw + " " : "") : fq(i.q, i.u) + " ") + i.t;
-const can = i => !!S[i.k] && i.q != null && (!S[i.k].u || S[i.k].u === i.u);
-const ex = (i, p) => fq(p[1] * (i.q == null ? 1 : i.q), p[2]);
+// A substitution's "u" is one unit or a list of units. A part unit of "=" means "same unit as the recipe line".
+const du = s => [].concat(s.u)[0] || "";                       // default unit (used by the Ingredient Book)
+const dl = s => du(s) === "cup" ? "cups" : du(s);
+const pu = (p, s) => p[2] === "=" ? du(s) : p[2];
+const can = i => !!S[i.k] && i.q != null && (!S[i.k].u || [].concat(S[i.k].u).includes(i.u));
+// Substitution amounts step down to a smaller unit when they'd round badly (3/16 cup -> 3 Tbsp).
+const off = q => Math.min(Math.abs(q - Math.round(q * 8) / 8), Math.abs(q - Math.round(q * 3) / 3)) / q;
+const fs = (q, u) => { if (q > 0 && u === "cup" && q < 1 && (q < .25 || off(q) > .04)) { q *= 16; u = "Tbsp"; } if (q > 0 && u === "Tbsp" && q < 1) { q *= 3; u = "tsp"; } return fq(q, u); };
+const ex = (i, p) => fs(p[1] * (i.q == null ? 1 : i.q), p[2] === "=" ? i.u : p[2]);
 const opt = (k, n) => S[k].o.find(o => o.n === n);
 const tag = o => `<div class="tag ${o.lac ? "" : "ok"}">${o.lac ? "Contains lactose" : "Lactose free" + (o.vg ? " · Vegan" : "")}</div>`;
 
@@ -46,10 +127,16 @@ const DATA_ERR = "<p>Could not load data/recipes.json. Run this site from a web 
 function loadData() {
   return Promise.all([
     fetch("data/recipes.json").then(r => r.json()),
-    fetch("data/substitutions.json").then(r => r.json())
-  ]).then(([r, s]) => {
-    // the data spells tablespoons both "Tbsp" and "tblsp"; treat them the same
-    r.forEach(x => x.ing.forEach(i => { if (i.u === "tblsp") i.u = "Tbsp"; }));
+    fetch("data/substitutions.json").then(r => r.json()),
+    fetch("data/aliases.json").then(r => r.json()).catch(() => ({}))   // optional
+  ]).then(([r, s, a]) => {
+    ALIAS = a;
+    r.forEach(x => {
+      // the data spells tablespoons both "Tbsp" and "tblsp"; treat them the same
+      // and fold spelling variants ("unsalted butter", "eggs", ...) onto one substitution key
+      x.ing.forEach(i => { if (i.u === "tblsp") i.u = "Tbsp"; i.k = ALIAS[i.k] || i.k; });
+      x.steps.forEach(st => { if (st.uses) st.uses = ALIAS[st.uses] || st.uses; });
+    });
     RECS = r; S = s; NAMES = r.map(x => x.name);
   });
 }
@@ -103,7 +190,7 @@ function initRecipe() {
 
   function lines() {
     return R().ing.map(i => {
-      if (applied[i.k]) {
+      if (applied[i.k] && can(i)) {
         const o = opt(i.k, applied[i.k]);
         return o.p.map(p => `<li class="chg">${ex(i, p)} ${p[0]}</li>`).join("");
       }
@@ -198,11 +285,11 @@ function initIngredients() {
   const arrow = `<svg width="16" height="16" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1" stroke-linejoin="round"><path d="M2 1.5v9l8-4.5z"/></svg>`;
 
   function parts() {
-    const b = BOOK[st.sel], k = b[1], o = S[k].o[st.open], a = st.amt[k] ?? 1;
+    const b = BOOK[st.sel], k = b[1], s = S[k], o = s.o[st.open], a = st.amt[k] ?? 1;
     const ids = o.p.map(p => o.n + "|" + p[0]);
     const n = ids.filter(i => checked[i]).length;
     return `<p class="mu sm">${n} of ${ids.length} ready</p>` + o.p.map((p, j) =>
-      `<label class="ck"><input type="checkbox" data-a="chk" data-id="${esc(ids[j])}" ${checked[ids[j]] ? "checked" : ""}> ${fq(p[1] * a, p[2])} ${p[0]}</label>`).join("");
+      `<label class="ck"><input type="checkbox" data-a="chk" data-id="${esc(ids[j])}" ${checked[ids[j]] ? "checked" : ""}> ${fs(p[1] * a, pu(p, s))} ${p[0]}</label>`).join("");
   }
   function cards() {
     const q = norm(st.iq);
@@ -217,7 +304,7 @@ function initIngredients() {
     if (!s) { side.innerHTML = head + `<div class="card no"><div><h3>No supported substitutions yet</h3><p class="mu">SubstiFood has no researched substitute for ${b[0]} yet.</p></div></div>`; return; }
     side.innerHTML = head + s.o.map((o, j) =>
       `<div class="card">${tag(o)}<button type="button" class="o" data-a="exp" data-j="${j}" aria-expanded="${st.open === j}"><h3>${o.n}</h3><span class="mu sm">Ratio ${o.r}</span></button>` +
-      (st.open === j ? `<div><p>${o.c}</p><label>How much do you need? <input class="fi" type="number" min="0" step=".25" value="${st.amt[b[1]] ?? 1}" data-a="amt" style="width:5.5em"> ${s.u === "cup" ? "cups" : (s.u || "")} of ${b[0].toLowerCase()}</label><div id="parts">${parts()}</div></div>` : "") +
+      (st.open === j ? `<div><p>${o.c}</p><label>How much do you need? <input class="fi" type="number" min="0" step=".25" value="${st.amt[b[1]] ?? 1}" data-a="amt" style="width:5.5em"> ${dl(s) ? dl(s) + " of " : ""}${b[0].toLowerCase()}</label><div id="parts">${parts()}</div></div>` : "") +
       `</div>`).join("");
   }
 
