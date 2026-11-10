@@ -280,8 +280,10 @@ function initBook() {
 
 /* Ingredient book */
 function initIngredients() {
-  const grid = $("ingredient-grid"), side = $("side"), search = $("ingredient-search");
-  const st = { sel: null, open: null, amt: {}, iq: "" };
+  const grid = $("ingredient-grid"), side = $("side"), search = $("ingredient-search"), pager = $("pager");
+  const PER = 9;   // 3 x 3 flashcards per page
+  const st = { sel: null, open: null, amt: {}, iq: "", page: 0 };
+  const arr = d => `<svg width="38" height="22" viewBox="0 0 38 22" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="${d ? "M2 11 13 2v5h23v8H13v5z" : "M36 11 25 2v5H2v8h23v5z"}"/></svg>`;
   const arrow = `<svg width="16" height="16" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1" stroke-linejoin="round"><path d="M2 1.5v9l8-4.5z"/></svg>`;
 
   function parts() {
@@ -293,7 +295,15 @@ function initIngredients() {
   }
   function cards() {
     const q = norm(st.iq);
-    return BOOK.map((b, i) => [b, i]).filter(([b]) => !q || norm(b[0]).includes(q)).map(([b, i]) =>
+    const all = BOOK.map((b, i) => [b, i]).filter(([b]) => !q || norm(b[0]).includes(q));
+    const pages = Math.max(1, Math.ceil(all.length / PER));
+    st.page = Math.min(Math.max(st.page, 0), pages - 1);
+    const from = st.page * PER, to = Math.min(all.length, from + PER);
+    pager.hidden = pages < 2;
+    pager.innerHTML = `<button type="button" class="arrow" data-a="page" data-d="-1" aria-label="Previous ingredients" ${st.page === 0 ? "disabled" : ""}>${arr(1)}</button>` +
+      `<span class="mu sm" aria-live="polite">${from + 1}\u2013${to} of ${all.length}</span>` +
+      `<button type="button" class="arrow" data-a="page" data-d="1" aria-label="Next ingredients" ${st.page === pages - 1 ? "disabled" : ""}>${arr(0)}</button>`;
+    return all.slice(from, to).map(([b, i]) =>
       `<button type="button" class="ingredient-card" data-a="sel" data-i="${i}" aria-pressed="${st.sel === i}"><h2>${b[0]}</h2><p>${b[2]}</p>${arrow}</button>`
     ).join("") || `<p class="mu">No ingredient matches that.</p>`;
   }
@@ -313,8 +323,14 @@ function initIngredients() {
     const d = t.dataset;
     if (d.a === "sel") { st.sel = +d.i; st.open = 0; grid.innerHTML = cards(); renderSide(); }
     else if (d.a === "exp") { st.open = st.open === +d.j ? null : +d.j; renderSide(); }
+    else if (d.a === "page") { st.page += +d.d; grid.innerHTML = cards(); }
   });
-  search.addEventListener("input", () => { st.iq = search.value; grid.innerHTML = cards(); });
+  search.addEventListener("input", () => { st.iq = search.value; st.page = 0; grid.innerHTML = cards(); });
+  // left / right arrow keys also turn the page (unless typing in a field)
+  document.addEventListener("keydown", e => {
+    if (/^(INPUT|SELECT|TEXTAREA)$/.test(e.target.tagName) || (e.key !== "ArrowLeft" && e.key !== "ArrowRight")) return;
+    st.page += e.key === "ArrowRight" ? 1 : -1; grid.innerHTML = cards();
+  });
   side.addEventListener("input", e => {
     if (e.target.dataset.a === "amt") {
       st.amt[BOOK[st.sel][1]] = Math.max(0, parseFloat(e.target.value) || 0);
