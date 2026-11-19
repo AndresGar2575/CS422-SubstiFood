@@ -142,7 +142,7 @@ function loadData() {
 }
 
 function highlightNav() {
-  const here = document.body.dataset.nav || location.pathname.split("/").pop() || "main.html";
+  const here = document.body.dataset.nav || location.pathname.split("/").pop() || "index.html";
   document.querySelectorAll(".nav-links a").forEach(a => {
     if (a.getAttribute("href") === here) a.setAttribute("aria-current", "page");
   });
@@ -151,7 +151,33 @@ function highlightNav() {
 /* Home */
 function initHome() {
   const st = { q: "", chosen: null, rid: null };
-  const input = $("recipe-search"), list = $("matches"), cook = $("cook-btn");
+  const input = $("recipe-search"), list = $("matches"), cook = $("cook-btn"), picks = $("picks");
+  let ideas = [];
+
+  // three different recipes, freshly shuffled on every page load
+  function shuffle(a) {
+    a = a.slice();
+    for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
+    return a;
+  }
+  function renderPicks() {
+    picks.innerHTML = ideas.map(r =>
+      `<button type="button" class="pick" data-id="${esc(r.id)}" aria-pressed="${st.rid === r.id}">` +
+      `<span class="pick-img">${r.thumb ? `<img src="${esc(r.thumb)}" alt="" loading="lazy" onerror="this.remove()">` : ""}</span>` +
+      `<span class="pick-name">${esc(r.name)}</span></button>`).join("");
+  }
+  function choose(r) {
+    st.chosen = r ? r.name : null; st.rid = r ? r.id : null;
+    if (r) { st.q = r.name; input.value = r.name; }
+    cook.textContent = r ? "Let’s cook: " + r.name : "Let’s cook";
+    cook.disabled = !r;
+    list.innerHTML = matches();
+    renderPicks();
+  }
+  picks.addEventListener("click", e => {
+    const b = e.target.closest("[data-id]"); if (!b) return;
+    choose(RECS.find(x => x.id === b.dataset.id));
+  });
 
   function matches() {
     const q = st.q.trim().toLowerCase();
@@ -163,22 +189,20 @@ function initHome() {
   }
 
   input.addEventListener("input", () => {
-    st.q = input.value; st.chosen = null; cook.hidden = true;
-    list.innerHTML = matches();
+    st.q = input.value;
+    choose(null);
   });
   list.addEventListener("click", e => {
     const b = e.target.closest("[data-n]"); if (!b) return;
-    const r = RECS.find(x => x.name === b.dataset.n); if (!r) return;
-    st.chosen = r.name; st.rid = r.id; st.q = r.name;
-    input.value = r.name;
-    cook.textContent = "Let’s Cook: " + r.name;
-    cook.hidden = false;
-    list.innerHTML = matches();
+    const r = RECS.find(x => x.name === b.dataset.n); if (r) choose(r);
   });
   cook.addEventListener("click", () => {
-    location.href = "recipe.html?id=" + encodeURIComponent(st.rid);
+    if (st.rid) location.href = "recipe.html?id=" + encodeURIComponent(st.rid);
   });
-  loadData().catch(() => { list.innerHTML = DATA_ERR; });
+  // coming back with the browser's Back button should also show new picks
+  window.addEventListener("pageshow", e => { if (e.persisted) location.reload(); });
+  loadData().then(() => { ideas = shuffle(RECS).slice(0, 3); renderPicks(); })
+    .catch(() => { list.innerHTML = DATA_ERR; });
 }
 
 /* Recipe view  */
@@ -318,7 +342,7 @@ function initIngredients() {
       `</div>`).join("");
   }
 
-  document.querySelector("main").addEventListener("click", e => {
+  document.querySelector("main.ingredient-page").addEventListener("click", e => {
     const t = e.target.closest("[data-a]"); if (!t) return;
     const d = t.dataset;
     if (d.a === "sel") { st.sel = +d.i; st.open = 0; grid.innerHTML = cards(); renderSide(); }
@@ -326,7 +350,6 @@ function initIngredients() {
     else if (d.a === "page") { st.page += +d.d; grid.innerHTML = cards(); }
   });
   search.addEventListener("input", () => { st.iq = search.value; st.page = 0; grid.innerHTML = cards(); });
-  // left / right arrow keys also turn the page (unless typing in a field)
   document.addEventListener("keydown", e => {
     if (/^(INPUT|SELECT|TEXTAREA)$/.test(e.target.tagName) || (e.key !== "ArrowLeft" && e.key !== "ArrowRight")) return;
     st.page += e.key === "ArrowRight" ? 1 : -1; grid.innerHTML = cards();

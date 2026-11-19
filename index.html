@@ -12,7 +12,7 @@
     <nav class="navbar">
         <div class="logo"><img src="images/sf-logo.png"></div>
         <ul class="nav-links">
-            <li><a href="main.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="recipe_book.html">Recipe Book</a></li>
             <li><a href="ingredient_book.html">Ingredient Book</a></li>
         </ul>
@@ -20,6 +20,7 @@
     <main class="home-page">
       <div class="search-bar">
           <h1>What are you cooking today?</h1>
+          <section class="picks" id="picks" aria-label="Recipe ideas"></section>
           <div class="sb">
             <form class="ingredient-search" role="search" onsubmit="return false">
                 <input id="recipe-search" type="search" placeholder="search for a recipe" aria-label="Search recipes" autocomplete="off" />
@@ -29,7 +30,7 @@
             </form>
             <div id="matches"></div>
           </div>
-          <button class="cook-btn" id="cook-btn" type="button" hidden>Let's Cook</button>
+          <button class="cook-btn" id="cook-btn" type="button" disabled>Let’s cook</button>
       </div>
     </main>
     <script src="app.js"></script>
